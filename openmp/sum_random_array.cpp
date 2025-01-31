@@ -1,5 +1,6 @@
 /*
  * compile with:
+ * use gnu compiler collection version 14(default g++ on mac os is clang)
  * g++-14 -fopenmp sum_random_array.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lgmpxx -lgmp -o sum_random_array
  * run with:
  * OMP_NUM_THREADS=4 ./sum_random_array 1000000 ../threads/arr.txt
@@ -35,7 +36,6 @@ int main(int argc, char *argv[]) {
     }
 
     mpz_class sum("0");
-    int* p_arr;
     #pragma omp parallel for reduction(mpz_add:sum)
     for (int i = 0; i < n; i++) {
         sum += mpz_class(to_string(arr[i]));
