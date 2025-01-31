@@ -1,7 +1,9 @@
 /*
+ * compile with:
+ * g++ gen_random_array.cpp -o gen_random_array
  * run with:
-* g++ gen_random_array.cpp -o gen_random_array
-*/
+ * NUM_THREADS=4 ./gen_random_array 1000000
+ */
 
 #include <iostream>
 #include <fstream>

@@ -1,7 +1,9 @@
 /*
+ * compile with:
+ * g++ sum_random_array.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lgmpxx -lgmp -o sum_random_array
  * run with:
-* g++ sum_random_array.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lgmpxx -lgmp -o sum_random_array
-*/
+ * NUM_THREADS=4 ./sum_random_array 1000000 arr.txt
+ */
 
 #include <iostream>
 #include <fstream>
